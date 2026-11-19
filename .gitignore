@@ -2,4 +2,5 @@ build/
 dist/
 *.spec
 *.exe
-yt_dlp_settings.json
+*.bat
+*.json
