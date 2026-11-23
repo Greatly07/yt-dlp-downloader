@@ -1,8 +1,11 @@
-﻿[Setup]
+﻿#ifndef AppVer
+  #define AppVer "2.0.1"
+#endif
+[Setup]
 AppName=yt-dlp Media Downloader
-AppVersion=2.0.0
-VersionInfoVersion=2.0.0
-OutputDir=.
+AppVersion={#AppVer}
+VersionInfoVersion={#AppVer}
+OutputDir=release\v{#AppVer}
 SetupIconFile=yt-dlp.ico
 UninstallDisplayIcon={app}\yt_dlp_app.exe
 ; Installs to User AppData/Programs so "Update yt-dlp Now", on-demand FFmpeg/Node downloads, and settings.json don't require Admin rights

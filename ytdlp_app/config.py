@@ -4,7 +4,7 @@ import sys
 # ============================================================================
 # APP VERSION & GITHUB REPOSITORY CONFIG
 # ============================================================================
-APP_VERSION = "2.0.0"
+APP_VERSION = "2.0.1"
 GITHUB_REPO = "Greatly07/yt-dlp-downloader"
 SONGPULSE_REPO = "Greatly07/songpulse"
 URI_SCHEME = "ytdlp"
@@ -177,31 +177,31 @@ VIDEO_FORMATS = [
         "mp4",
         "MP4 (Standard)",
         "MP4 (MPEG-4 Part 14)\n\n"
-        "• Best all-around video format.\n"
-        "• Plays on almost every phone, TV, tablet, web browser, and video editor.\n"
-        "• Merges video and audio cleanly into an .mp4 container.",
+        "â€¢ Best all-around video format.\n"
+        "â€¢ Plays on almost every phone, TV, tablet, web browser, and video editor.\n"
+        "â€¢ Merges video and audio cleanly into an .mp4 container.",
     ),
     (
         "mkv",
         "MKV (High Quality)",
         "MKV (Matroska Video)\n\n"
-        "• Flexible container that stores the highest quality video (VP9/AV1 4K) and Opus audio without re-encoding.\n"
-        "• Ideal for watching on PC (VLC, MPV), though some mobile devices may not open it natively.",
+        "â€¢ Flexible container that stores the highest quality video (VP9/AV1 4K) and Opus audio without re-encoding.\n"
+        "â€¢ Ideal for watching on PC (VLC, MPV), though some mobile devices may not open it natively.",
     ),
     (
         "webm",
         "WebM (Original)",
         "WebM\n\n"
-        "• YouTube's native streaming format.\n"
-        "• Downloads directly without converting or repackaging, preserving original quality.\n"
-        "• Works in modern web browsers and PC media players.",
+        "â€¢ YouTube's native streaming format.\n"
+        "â€¢ Downloads directly without converting or repackaging, preserving original quality.\n"
+        "â€¢ Works in modern web browsers and PC media players.",
     ),
     (
         "mov",
         "MOV (Editing)",
         "MOV (Apple QuickTime Container)\n\n"
-        "• Repackages the video into a QuickTime .mov container.\n"
-        "• Useful if you plan to import the clip directly into video editing software.",
+        "â€¢ Repackages the video into a QuickTime .mov container.\n"
+        "â€¢ Useful if you plan to import the clip directly into video editing software.",
     ),
 ]
 
@@ -210,106 +210,106 @@ AUDIO_FORMATS = [
         "mp3",
         "MP3 (Standard)",
         "MP3 (MPEG Audio Layer III)\n\n"
-        "• The most universal music format.\n"
-        "• Compatible with every music player, phone, car stereo, and speaker.\n"
-        "• Slightly compresses audio to keep file sizes small.",
+        "â€¢ The most universal music format.\n"
+        "â€¢ Compatible with every music player, phone, car stereo, and speaker.\n"
+        "â€¢ Slightly compresses audio to keep file sizes small.",
     ),
     (
         "m4a",
         "M4A (AAC)",
         "M4A (Advanced Audio Coding)\n\n"
-        "• Often downloaded directly from the source without needing lossy re-conversion.\n"
-        "• Delivers slightly cleaner sound than MP3 at the same file size.",
+        "â€¢ Often downloaded directly from the source without needing lossy re-conversion.\n"
+        "â€¢ Delivers slightly cleaner sound than MP3 at the same file size.",
     ),
     (
         "wav",
         "WAV (Uncompressed)",
         "WAV (Waveform Audio File Format)\n\n"
-        "• Uncompressed raw audio.\n"
-        "• Produces large files, ideal for importing into audio or video editing software.",
+        "â€¢ Uncompressed raw audio.\n"
+        "â€¢ Produces large files, ideal for importing into audio or video editing software.",
     ),
     (
         "flac",
         "FLAC (Lossless)",
         "FLAC (Free Lossless Audio Codec)\n\n"
-        "• Compresses audio with zero quality loss compared to WAV.\n"
-        "• Supports full album art and metadata tags at roughly half the size of WAV.",
+        "â€¢ Compresses audio with zero quality loss compared to WAV.\n"
+        "â€¢ Supports full album art and metadata tags at roughly half the size of WAV.",
     ),
     (
         "opus",
         "Opus",
         "Opus Audio\n\n"
-        "• YouTube's highest-quality native audio stream.\n"
-        "• Offers excellent sound fidelity at small file sizes.",
+        "â€¢ YouTube's highest-quality native audio stream.\n"
+        "â€¢ Offers excellent sound fidelity at small file sizes.",
     ),
     (
         "orig",
         "Original (No FFmpeg)",
         "Original Audio Stream\n\n"
-        "• Saves the raw audio file (.webm or .m4a) straight from the server without converting it.\n"
-        "• Works even if FFmpeg is not installed!",
+        "â€¢ Saves the raw audio file (.webm or .m4a) straight from the server without converting it.\n"
+        "â€¢ Works even if FFmpeg is not installed!",
     ),
 ]
 
 EXTRA_HELP = {
     "presets": (
         "Download Presets\n\n"
-        "• Preset 1 (Video): Downloads MP4 video with best resolution available.\n"
-        "• Preset 2 (Music): Downloads MP3 music with best quality.\n"
-        "• Preset 3 (Playlist): Add playlist/queued links to a new folder.\n"
-        "• You can also save your current configuration as a custom preset!"
+        "â€¢ Preset 1 (Video): Downloads MP4 video with best resolution available.\n"
+        "â€¢ Preset 2 (Music): Downloads MP3 music with best quality.\n"
+        "â€¢ Preset 3 (Playlist): Add playlist/queued links to a new folder.\n"
+        "â€¢ You can also save your current configuration as a custom preset!"
     ),
     "quality": (
         "Strict Video Resolution & Custom Scaling\n\n"
-        "• Auto (Best): Downloads the highest available video quality.\n"
-        "• Preset (e.g., 1080p): Forces yt-dlp to select that exact resolution stream.\n"
-        "• Custom Resolution: Downloads the best stream and rescales it via FFmpeg to your exact height (e.g., 540) or dimensions (e.g., 1280x720)."
+        "â€¢ Auto (Best): Downloads the highest available video quality.\n"
+        "â€¢ Preset (e.g., 1080p): Forces yt-dlp to select that exact resolution stream.\n"
+        "â€¢ Custom Resolution: Downloads the best stream and rescales it via FFmpeg to your exact height (e.g., 540) or dimensions (e.g., 1280x720)."
     ),
     "audio_quality": (
         "Sound Quality (Audio Stream & Bitrate)\n\n"
-        "• Auto (Best Audio): Selects the highest quality source stream ('bestaudio') and VBR quality 0.\n"
-        "• Specific Bitrate (e.g., 320 kbps, 192 kbps): Sets target encoding bitrate via FFmpeg when converting to MP3/M4A/Opus."
+        "â€¢ Auto (Best Audio): Selects the highest quality source stream ('bestaudio') and VBR quality 0.\n"
+        "â€¢ Specific Bitrate (e.g., 320 kbps, 192 kbps): Sets target encoding bitrate via FFmpeg when converting to MP3/M4A/Opus."
     ),
     "custom_title": (
         "Custom File Title\n\n"
-        "• Leave blank to keep the video/song's original title.\n"
-        "• Always resets to empty when the app starts so you don't accidentally overwrite future downloads."
+        "â€¢ Leave blank to keep the video/song's original title.\n"
+        "â€¢ Always resets to empty when the app starts so you don't accidentally overwrite future downloads."
     ),
     "remove_links": (
         "Remove Links from Titles\n\n"
-        "• Automatically strips http:// and https:// URLs out of titles (very useful for Twitter/X, TikTok, and Instagram posts)."
+        "â€¢ Automatically strips http:// and https:// URLs out of titles (very useful for Twitter/X, TikTok, and Instagram posts)."
     ),
     "playlist_folder": (
         "Playlist & Batch Subfolder\n\n"
-        "• Creates a subfolder inside your Save Directory when downloading a YouTube playlist OR when batch-downloading multiple songs (including from SongPulse).\n"
-        "• Leave the folder name box blank to use the playlist's real title (or 'Batch Playlist' for multi-link queues), or enter your own folder name."
+        "â€¢ Creates a subfolder inside your Save Directory when downloading a YouTube playlist OR when batch-downloading multiple songs (including from SongPulse).\n"
+        "â€¢ Leave the folder name box blank to use the playlist's real title (or 'Batch Playlist' for multi-link queues), or enter your own folder name."
     ),
     "playlist_numbers": (
         "Order Playlist with Numbers\n\n"
-        "• Adds the track/video number in front of playlist or batch filenames (e.g., '1 - Song Title.mp3', '2 - Song Title.mp3').\n"
-        "• Has no effect when downloading a single video or song."
+        "â€¢ Adds the track/video number in front of playlist or batch filenames (e.g., '1 - Song Title.mp3', '2 - Song Title.mp3').\n"
+        "â€¢ Has no effect when downloading a single video or song."
     ),
     "meta": (
         "Cover Art & Media Info (Default: ON)\n\n"
-        "• Embeds the thumbnail as the song/video cover image.\n"
-        "• Writes title, artist/channel name, upload date, and description into the file tags.\n"
-        "• Requires FFmpeg."
+        "â€¢ Embeds the thumbnail as the song/video cover image.\n"
+        "â€¢ Writes title, artist/channel name, upload date, and description into the file tags.\n"
+        "â€¢ Requires FFmpeg."
     ),
     "subtitles": (
         "Include Subtitles & Language\n\n"
-        "• Downloads and embeds available subtitles (including auto-generated captions) directly into video files.\n"
-        "• Pick a language preset or choose Custom and enter comma-separated language codes (e.g., en,id,ja,ko)."
+        "â€¢ Downloads and embeds available subtitles (including auto-generated captions) directly into video files.\n"
+        "â€¢ Pick a language preset or choose Custom and enter comma-separated language codes (e.g., en,id,ja,ko)."
     ),
     "cookies": (
         "Browser Cookies & cookies.txt (Authentication)\n\n"
-        "• Why Chrome fails on Windows: Chrome v127+ introduced App-Bound Encryption and locks its cookie database while running, preventing external tools like yt-dlp from reading Chrome cookies directly.\n"
-        "• Solution 1 (Recommended): Use a Netscape 'cookies.txt' file exported from Chrome/Brave/Edge using an extension like 'Get cookies.txt LOCALLY'.\n"
-        "• Solution 2: Select Firefox (which works seamlessly even while open)."
+        "â€¢ Why Chrome fails on Windows: Chrome v127+ introduced App-Bound Encryption and locks its cookie database while running, preventing external tools like yt-dlp from reading Chrome cookies directly.\n"
+        "â€¢ Solution 1 (Recommended): Use a Netscape 'cookies.txt' file exported from Chrome/Brave/Edge using an extension like 'Get cookies.txt LOCALLY'.\n"
+        "â€¢ Solution 2: Select Firefox (which works seamlessly even while open)."
     ),
     "songpulse": (
         "SongPulse Automatic Batch Integration\n\n"
-        "• Registers the 'ytdlp://' protocol handler in Windows so clicking 'Download Playlist' in SongPulse launches yt-dlp Downloader and automatically downloads all tracks into a new playlist folder.\n"
-        "• URI Format: ytdlp://download?playlist=My%20Playlist&urls=https://...,https://...\n"
-        "• CLI Format: yt_dlp_app.exe --songpulse --playlist \"My Playlist\" --urls <url1> <url2> ..."
+        "â€¢ Registers the 'ytdlp://' protocol handler in Windows so clicking 'Download Playlist' in SongPulse launches yt-dlp Downloader and automatically downloads all tracks into a new playlist folder.\n"
+        "â€¢ URI Format: ytdlp://download?playlist=My%20Playlist&urls=https://...,https://...\n"
+        "â€¢ CLI Format: yt_dlp_app.exe --songpulse --playlist \"My Playlist\" --urls <url1> <url2> ..."
     ),
 }

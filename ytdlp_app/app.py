@@ -2696,9 +2696,17 @@ class YtDlpApp(tk.Tk, PreviewMixin, DownloaderMixin):
                         f'start "" "{current_file}"\n'
                         'del "%~f0"\n'
                     )
+                # Strip PyInstaller's bootloader env vars so the relaunched exe
+                # extracts its own fresh temp dir instead of reusing this
+                # (soon-to-be-deleted) _MEIxxxx folder -> "Failed to load Python DLL".
+                clean_env = {
+                    k: v for k, v in os.environ.items()
+                    if not (k.startswith("_PYI") or k.startswith("_MEIPASS"))
+                }
                 subprocess.Popen(
                     ["cmd.exe", "/c", bat_path],
                     creationflags=subprocess.CREATE_NO_WINDOW,
+                    env=clean_env,
                 )
                 self.after(0, self.on_close)
             else:
