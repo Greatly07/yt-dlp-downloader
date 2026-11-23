@@ -4,3 +4,4 @@ dist/
 *.exe
 *.bat
 *.json
+__pycache__/
